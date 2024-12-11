@@ -52,5 +52,15 @@
       "style": "css",
       "unitTestRunner": "jest"
     }
+  },
+  "projects": {
+    "home": {
+      "root": "apps/home",
+      "sourceRoot": "apps/home/src"
+    },
+    "product": {
+      "root": "apps/product",
+      "sourceRoot": "apps/product/src"
+    }
   }
 }

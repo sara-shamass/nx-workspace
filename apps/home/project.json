@@ -1,27 +1,29 @@
 {
-  "name": "nx-workspace",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "home",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/nx-workspace/src",
+  "root": "apps/home",
+  "sourceRoot": "apps/home/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nx-workspace",
-        "index": "apps/nx-workspace/src/index.html",
-        "browser": "apps/nx-workspace/src/main.ts",
+        "outputPath": "dist/home",
+        "index": "apps/home/src/index.html",
+        "browser": "apps/home/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/nx-workspace/tsconfig.app.json",
+        "tsConfig": "apps/home/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/nx-workspace/public"
+            "input": "home/public"
           }
         ],
-        "styles": ["apps/nx-workspace/src/styles.css"],
+        "styles": ["apps/home/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -52,10 +54,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "nx-workspace:build:production"
+          "buildTarget": "home:build:production"
         },
         "development": {
-          "buildTarget": "nx-workspace:build:development"
+          "buildTarget": "home:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,24 +65,17 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "nx-workspace:build"
+        "buildTarget": "home:build"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint"
     },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-      "options": {
-        "jestConfig": "apps/nx-workspace/jest.config.ts"
-      }
-    },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "nx-workspace:build",
-        "staticFilePath": "dist/apps/nx-workspace/browser",
+        "buildTarget": "home:build",
+        "staticFilePath": "dist/home/browser",
         "spa": true
       }
     }
