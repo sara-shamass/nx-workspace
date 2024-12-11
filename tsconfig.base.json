@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-workspace/customer": ["libs/customer/src/index.ts"],
       "@nx-workspace/customers": ["libs/customers/src/index.ts"],
       "@nx-workspace/products": ["libs/products/src/index.ts"]
     }

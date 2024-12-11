@@ -1,1 +1,6 @@
-<p>customers works!</p>
+<h2>Customers</h2>
+@for (customer of customers; track customer.name) {
+<lib-products [title]="customer.name">
+    <div>From {{ customer.city }}</div>
+</lib-products>
+}

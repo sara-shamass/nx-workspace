@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,4 +8,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
-export class ProductsComponent {}
+export class ProductsComponent {
+  products = [
+    { name: "Bread", price: 1.5 },
+    { name: "Shirt", price: 60 },
+    { name: "Water", price: 0.99 },
+    { name: "Table", price: 200 },
+  ];
+
+  title = input("");
+}
