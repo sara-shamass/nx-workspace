@@ -1,0 +1,29 @@
+{
+  "name": "customers",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/customers/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/customers/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/customers/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/customers/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

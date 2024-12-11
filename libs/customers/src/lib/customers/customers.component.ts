@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-shared-lib',
+  selector: 'lib-customers',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './shared-lib.component.html',
-  styleUrl: './shared-lib.component.css',
+  templateUrl: './customers.component.html',
+  styleUrl: './customers.component.css',
 })
-export class SharedLibComponent {}
+export class CustomersComponent {}
